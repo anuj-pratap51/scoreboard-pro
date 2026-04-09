@@ -28,7 +28,7 @@ export default function AdminResults() {
       setLoading(true);
       let query = supabase
         .from('exam_attempts')
-        .select('*, exams(title), profiles!exam_attempts_user_id_fkey(full_name, email)')
+        .select('*, exams(title)')
         .eq('is_submitted', true)
         .order('submitted_at', { ascending: false });
 
