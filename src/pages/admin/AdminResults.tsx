@@ -37,7 +37,18 @@ export default function AdminResults() {
       }
 
       const { data } = await query;
-      setResults(data || []);
+      const attempts = data || [];
+
+      // Fetch profiles for user_ids
+      const userIds = [...new Set(attempts.map(a => a.user_id))];
+      if (userIds.length > 0) {
+        const { data: profiles } = await supabase.from('profiles').select('user_id, full_name, email').in('user_id', userIds);
+        const profileMap: Record<string, any> = {};
+        (profiles || []).forEach(p => { profileMap[p.user_id] = p; });
+        attempts.forEach(a => { (a as any).profile = profileMap[a.user_id] || null; });
+      }
+
+      setResults(attempts);
       setLoading(false);
     };
     fetchResults();
