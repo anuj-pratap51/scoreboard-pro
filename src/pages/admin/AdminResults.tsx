@@ -113,7 +113,7 @@ export default function AdminResults() {
             </div>
             <div>
               <p className="text-2xl font-heading font-bold text-foreground truncate">
-                {topPerformer ? ((topPerformer.profiles as any)?.full_name || (topPerformer.profiles as any)?.email || 'N/A') : 'N/A'}
+                {topPerformer ? (((topPerformer as any).profile)?.full_name || ((topPerformer as any).profile)?.email || 'N/A') : 'N/A'}
               </p>
               <p className="text-sm text-muted-foreground">Top Performer</p>
             </div>
@@ -144,7 +144,7 @@ export default function AdminResults() {
                   const pct = r.total_marks ? Math.round((r.score / r.total_marks) * 100) : 0;
                   return (
                     <tr key={r.id} className="border-b border-border last:border-0">
-                      <td className="p-3 text-foreground">{(r.profiles as any)?.full_name || (r.profiles as any)?.email || 'Unknown'}</td>
+                      <td className="p-3 text-foreground">{((r as any).profile)?.full_name || ((r as any).profile)?.email || 'Unknown'}</td>
                       <td className="p-3 text-foreground">{(r.exams as any)?.title}</td>
                       <td className="p-3 text-foreground">{r.score}/{r.total_marks}</td>
                       <td className="p-3">
