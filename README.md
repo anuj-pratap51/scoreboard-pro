@@ -1,41 +1,50 @@
 # Scoreboard Pro
 
-> One-line description: a [web/mobile/desktop] scoreboard app for tracking [sport/game] scores in real time.
+> A scoreboard app for tracking scores in real time.
+
+🔗 **Live Demo:** [https://scoreboard-pro-my74.vercel.app](https://scoreboard-pro-my74.vercel.app/)
 
 ## Features
-- Live score tracking for [teams/players]
+- Live score tracking
 - [Timer / period / round management]
 - [Score history / undo]
-- [Customizable team names, colors, logos]
-- [Responsive display / full-screen mode for projectors]
-
-## Demo
-![Screenshot](./screenshots/demo.png)
-[Live demo](https://your-demo-link)
+- [Customizable team or player names]
+- Responsive design for desktop and mobile
 
 ## Tech Stack
-- **Frontend:** [HTML/CSS/JS, React, etc.]
-- **Backend:** [Node.js, Firebase, none]
-- **Other:** [WebSockets, localStorage, etc.]
+- **Frontend:** [React, TypeScript, Tailwind CSS, etc.]
+- **Hosting:** Vercel
+- **Built with:** Lovable
 
 ## Getting Started
 
 ### Prerequisites
-- [Node.js v18+ / a modern browser]
+- Node.js v18 or higher
+- npm or yarn
 
 ### Installation
 ```bash
 git clone https://github.com/anuj-pratap51/scoreboard-pro.git
 cd scoreboard-pro
 npm install
-npm start
+npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Then open `http://localhost:5173`. The port may differ depending on your setup.
 
 ## Usage
 1. Enter team or player names.
 2. Use the controls to add or subtract points.
-3. [Start/pause the timer, reset the match, etc.]
+3. [Start or pause the timer, reset the match, etc.]
 
-## Project Structure
+## Deployment
+The project is deployed on [Vercel](https://vercel.com/). Pushes to the main branch redeploy automatically.
+
+## Contributing
+Pull requests are welcome. Fork the repo, create a feature branch, and open a PR.
+
+## License
+[MIT](LICENSE)
+
+## Author
+**Anuj Pratap**: [GitHub](https://github.com/anuj-pratap51)
